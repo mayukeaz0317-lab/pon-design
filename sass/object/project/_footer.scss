@@ -1,0 +1,40 @@
+@use "../../global" as *;
+
+.p-footer {
+
+    &__inner {
+        width: min(100% - rem(60), rem(922));
+    }
+
+    &__copyright {
+        display: block;
+        text-align: center;
+        font-size: rem(10);
+        line-height: lh(18, 10);
+        color: #A798B7;
+        text-transform: uppercase;
+    }
+}
+
+.p-footer-nav {
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        font-size: rem(12);
+        line-height: 1.0;
+        margin-bottom: rem(30);
+        color: #fff;
+        text-transform: uppercase;
+
+        @include mq($sm) {
+            justify-content: center;
+        }
+
+    }
+
+    &__link {
+        display: inline-block;
+        padding: 5px;
+    }
+}

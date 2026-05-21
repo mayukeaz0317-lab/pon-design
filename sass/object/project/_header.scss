@@ -1,0 +1,91 @@
+@use "../../global" as *;
+
+.p-header {
+
+    &__inner {
+        width: min(100% - rem(30), rem(1380));
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        width: rem(120);
+        height: rem(12.96);
+
+        @include mq($lg) {
+            width: rem(160.92);
+            height: rem(17.38);
+        }
+    }
+
+
+    &__global-nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transform: translateY(-100%);
+        z-index: 2;
+        transition: transform 0.3s ease;
+
+        @include mq($lg) {
+            position: static;
+            transform: translateY(0);
+        }
+
+        &.is-active {
+            transform: translateY(0);
+        }
+
+    }
+}
+
+.p-logo {
+    &__img {
+        display: block;
+    }
+}
+
+.p-header-nav {
+    @include flex-center;
+    background-image: linear-gradient(135deg, #7633a4, #250d65);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+
+    @include mq($lg) {
+        background-image: none;
+    }
+
+    &__list {
+        flex-direction: column;
+        gap: rem(20);
+        color: #fff;
+        @include flex-center;
+
+        @include mq($lg) {
+            flex-direction: row;
+        }
+    }
+
+    &__link {
+        font-weight: 700;
+        font-size: rem(16);
+        line-height: lh(28.8, 16);
+        text-transform: uppercase;
+
+        @include mq($lg) {
+            font-size: rem(14);
+            line-height: lh(25.2, 14);
+        }
+
+        &::hover {
+            border-bottom: 2px solid #fff;
+        }
+    }
+}

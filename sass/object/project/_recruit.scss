@@ -1,0 +1,39 @@
+@use "../../global" as *;
+.p-recruit{
+    padding-top: rem(30);
+    @include mq($lg) {
+        padding-top: rem(40);
+        padding-bottom: rem(110);
+    }
+    &__inner{
+        @include mq($md) {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+    }
+
+    &__thumb{
+        aspect-ratio: 345 / 200;
+        overflow: hidden;
+        @include mq($md) {
+            width: 60%;
+        }
+    }
+    &__content{
+        background-color: #F0F0F0;
+        padding: rem(70) 0;
+        @include mq($md) {
+            flex: 1;
+        }
+    }
+    &__desc{
+        font-size: rem(14);
+        line-height: lh(25.2,14);
+        font-weight: 400;
+        text-align: center;
+        @include mq($md) {
+            font-size: rem(15);
+            line-height: lh(27,15);
+        }
+    }
+}

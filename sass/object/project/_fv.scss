@@ -1,0 +1,78 @@
+@use "../../global" as *;
+
+.p-fv {
+    position: relative;
+    background-image: url(../../../img/photo/hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-left: rem(30);
+    min-height: 100dvh;
+    color: #fff;
+    @include flex-center;
+
+    @include mq($lg) {
+        background-image: url(../../../img/photo/hero-cp.jpg);
+        padding: rem(0);
+    }
+
+    &__inner {
+        @include flex-center;
+        flex-direction: column;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: rem(40);
+        line-height: lh(44, 40);
+        text-transform: uppercase;
+
+        @include mq($lg) {
+            font-size: rem(72);
+            line-height: 1.0;
+        }
+    }
+
+    &__desc {
+        margin-top: rem(20);
+        margin-bottom: rem(30);
+        font-size: rem(16);
+        line-height: lh(28.8, 16);
+        letter-spacing: 0.1em;
+
+        @include mq($lg) {
+            font-size: rem(24);
+            line-height: lh(43.2, 24);
+            margin-bottom: rem(50);
+        }
+    }
+
+    &__link {
+        .c-btn {
+            border: 1px solid white;
+            background-image: none;
+        }
+    }
+
+    &__scroll {
+        position: absolute;
+        right: 15px;
+        bottom: 60px;
+        font-weight: bold;
+        font-size: rem(12);
+        line-height: 1.0;
+        letter-spacing: 0.2em;
+        writing-mode: vertical-lr;
+        text-transform: uppercase;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: calc(100% + 15px);
+            right: 5px;
+            width: 1px;
+            height: 50px;
+            background-color: #fff;
+
+        }
+    }
+}

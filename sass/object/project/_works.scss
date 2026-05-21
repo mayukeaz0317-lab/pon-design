@@ -1,0 +1,117 @@
+@use "../../global" as *;
+
+.p-works {
+    padding-top: rem(30);
+    padding-bottom: 0;
+
+    @include mq($md) {
+        padding-top: rem(60);
+        padding-bottom: rem(40);
+    }
+
+    &__inner {
+        width: min(100% - rem(40), rem(1300));
+
+        @include mq($md) {
+            display: flex;
+
+        }
+
+    }
+
+    &__content {
+        position: relative;
+        z-index: 1;
+        background-color: #F0F0F0;
+        padding-top: rem(118.6);
+        padding-bottom: rem(60.45);
+
+        @include mq($md) {
+            width: 60%;
+            padding: rem(140) 0;
+            padding-right: rem(20);
+        }
+
+        @include mq($lg) {
+            padding: rem(213) 0;
+            padding-right: rem(46);
+        }
+
+        &::before {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+            background-color: #F0F0F0;
+            width: 100vw;
+            content: "";
+
+            @include mq($md) {
+                background-color: transparent;
+
+            }
+        }
+
+    }
+
+    &__desc {
+        font-size: rem(14);
+        line-height: lh(25.2, 14);
+
+        @include mq($lg) {
+            font-size: rem(15);
+            line-height: lh(27, 15);
+        }
+    }
+
+    &__slider-container {
+        position: relative;
+        z-index: 2;
+        margin-bottom: rem(-80);
+
+        @include mq($md) {
+            width: 57.7%;
+            margin-right: rem(-203);
+            margin-top: rem(60);
+        }
+    }
+
+    &__slider {
+        position: relative;
+        aspect-ratio: 750 / 510;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    &__arrow {
+        color: #3b1d75 !important;
+
+        &::after {
+            -webkit-text-stroke: 2.5px #3b1d75;
+            font-weight: 900;
+            font-size: rem(20) !important;
+        }
+    }
+
+    &__pagination {
+        display: flex;
+        right: 0 !important;
+        bottom: rem(-15) !important;
+        left: auto !important;
+        gap: rem(12);
+        width: auto !important;
+
+        .swiper-pagination-bullet-active {
+            background: #3b1d75 !important;
+        }
+
+        .swiper-pagination-bullet {
+            margin: 0 !important;
+            width: rem(8);
+            height: rem(8);
+        }
+    }
+
+}

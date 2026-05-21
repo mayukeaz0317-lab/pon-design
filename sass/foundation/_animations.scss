@@ -1,0 +1,19 @@
+.p-fv__scroll{
+    &::after{
+        animation: scroll-line 2.5s cubic-bezier(0.25,1,0.5,1) infinite;
+    }
+}
+@keyframes scroll-line {
+  0% {
+    clip-path: inset(0 0 100% 0); /* 0%：上端に縮んでいる状態 */
+  }
+  40% {
+    clip-path: inset(0 0 0 0); /* 40%：下まで完全に伸びきった状態 */
+  }
+  80% {
+    clip-path: inset(100% 0 0 0); /* 80%：上の端から追いかけるように消える */
+  }
+  100% {
+    clip-path: inset(100% 0 0 0); /* 100%：次のループまでの静止時間 */
+  }
+}

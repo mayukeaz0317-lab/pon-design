@@ -1,0 +1,26 @@
+@use "../../global" as *;
+.c-btn{
+    display: block;
+    position: relative;
+    border-radius: 50px;
+    padding: rem(18) 0;
+    width: 220px;
+    font-weight: 700;
+    font-size: rem(14);
+    line-height: lh(19.6,14);
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    background-image: linear-gradient(to right,#7633A4,#250D65);
+    &::after{
+        position: absolute;
+        top: 50%;
+        right: 21px;
+        transform: translateY(-50%);
+        background-image: url(../../../img/icon/right-arrow.svg);
+        background-repeat: no-repeat;
+        width: 8.41px;
+        height: 20px;
+        content: "";
+    }
+}

@@ -1,0 +1,46 @@
+@use "../../global" as *;
+
+.p-service {
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: rem(40);
+        @include mq($md) {
+            gap: rem(30);
+            grid-template-columns: repeat(2,1fr);
+        }
+        @include mq($lg) {
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
+
+    &__thumb {
+        aspect-ratio: 350 / 220;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    &__title {
+        margin-top: rem(15);
+        margin-bottom: rem(10);
+        font-weight: 700;
+        font-size: rem(18);
+        line-height: lh(21.6, 18);
+        text-align: center;
+        @include mq($lg) {
+            font-size: rem(18);
+            line-height: lh(21.6,18);
+            margin-bottom: rem(15);
+        }
+    }
+
+    &__desc {
+        font-size: rem(14);
+        line-height: lh(25, 14);
+        @include mq($lg) {
+            font-size: rem(15);
+            line-height: lh(27,15);
+        }
+    }
+}

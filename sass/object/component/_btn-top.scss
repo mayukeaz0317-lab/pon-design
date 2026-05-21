@@ -1,0 +1,35 @@
+@use "../../global" as *;
+
+.c-btn-top {
+    position: fixed;
+    bottom: rem(10);
+    right: rem(20);
+    z-index: 1;
+    width: rem(50);
+    height: rem(50);
+    background-color: #ffffff;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    background-image: url(../../../img/icon/solid_arrow-up_15px.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(rem(10));
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+
+
+
+    &.is-show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    &:hover {
+        transform: translateY(rem(-3));
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+}

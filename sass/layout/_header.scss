@@ -1,0 +1,18 @@
+@use "../global" as *;
+
+.l-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    padding: rem(12) 0;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    @include mq($lg) {
+        padding: rem(30) 0;
+    }
+    &.is-scrolled{
+        background-color: #21054D;
+    }
+}

@@ -1,0 +1,10 @@
+@use "../global" as *;
+.l-inner {
+    width: min(100% - rem(30), rem(1110));
+    margin: 0 auto;
+
+    &--wide {
+        width: min(100% - rem(30), rem(1300));
+        margin: 0 auto;
+    }
+}
