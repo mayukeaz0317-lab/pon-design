@@ -1,4 +1,5 @@
 $(function () {
+  // ハンバーガーメニュー
   $('.js-btn-menu').on('click', function () {
     $(this).toggleClass('is-active');
     $('.p-header__global-nav').toggleClass('is-active');
@@ -22,6 +23,8 @@ $(function () {
       clickable: true,
     },
   });
+
+  // ヘッダースクロール後に背景画像出現
   $(function () {
     const $header = $('.l-header');
     const changePoint = 50;
@@ -34,6 +37,8 @@ $(function () {
       }
     });
   });
+
+  // トップへ戻るボタン
   $(function () {
     const $btnTop = $('.js-btn-top');
     const displayPoint = 300;

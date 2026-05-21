@@ -14,6 +14,7 @@
 
         @include mq($md) {
             display: flex;
+            justify-content: space-between;
 
         }
 
@@ -25,15 +26,23 @@
         background-color: #F0F0F0;
         padding-top: rem(118.6);
         padding-bottom: rem(60.45);
+        flex-shrink: 0;
 
         @include mq($md) {
             width: 60%;
             padding: rem(140) 0;
-            padding-right: rem(20);
+            padding-left: rem(220);
+            padding-right: rem(15);
         }
 
         @include mq($lg) {
+            padding-top: rem(160);
+            padding-bottom: rem(160);
+        }
+
+        @include mq($xl) {
             padding: rem(213) 0;
+            padding-left: rem(304);
             padding-right: rem(46);
         }
 
@@ -49,7 +58,7 @@
             content: "";
 
             @include mq($md) {
-                background-color: transparent;
+                content: none;
 
             }
         }
@@ -77,12 +86,19 @@
             margin-top: rem(60);
         }
     }
+    .swiper{
+        padding-bottom: rem(15);
+    }
 
     &__slider {
         position: relative;
         aspect-ratio: 750 / 510;
         width: 100%;
         overflow: hidden;
+        .swiper-wrapper {
+            aspect-ratio: 750 / 510;
+            width: 100%;
+        }
     }
 
     &__arrow {
@@ -98,7 +114,7 @@
     &__pagination {
         display: flex;
         right: 0 !important;
-        bottom: rem(-15) !important;
+        bottom: 0 !important;
         left: auto !important;
         gap: rem(12);
         width: auto !important;

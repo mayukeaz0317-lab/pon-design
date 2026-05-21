@@ -795,6 +795,7 @@ th {
 @media screen and (min-width: 768px) {
   .p-works__inner {
     display: flex;
+    justify-content: space-between;
   }
 }
 .p-works__content {
@@ -803,17 +804,26 @@ th {
   background-color: #F0F0F0;
   padding-top: 7.4125rem;
   padding-bottom: 3.778125rem;
+  flex-shrink: 0;
 }
 @media screen and (min-width: 768px) {
   .p-works__content {
     width: 60%;
     padding: 8.75rem 0;
-    padding-right: 1.25rem;
+    padding-left: 13.75rem;
+    padding-right: 0.9375rem;
   }
 }
 @media screen and (min-width: 1024px) {
   .p-works__content {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .p-works__content {
     padding: 13.3125rem 0;
+    padding-left: 19rem;
     padding-right: 2.875rem;
   }
 }
@@ -830,7 +840,7 @@ th {
 }
 @media screen and (min-width: 768px) {
   .p-works__content::before {
-    background-color: transparent;
+    content: none;
   }
 }
 .p-works__desc {
@@ -855,11 +865,18 @@ th {
     margin-top: 3.75rem;
   }
 }
+.p-works .swiper {
+  padding-bottom: 0.9375rem;
+}
 .p-works__slider {
   position: relative;
   aspect-ratio: 750/510;
   width: 100%;
   overflow: hidden;
+}
+.p-works__slider .swiper-wrapper {
+  aspect-ratio: 750/510;
+  width: 100%;
 }
 .p-works__arrow {
   color: #3b1d75 !important;
@@ -872,7 +889,7 @@ th {
 .p-works__pagination {
   display: flex;
   right: 0 !important;
-  bottom: -0.9375rem !important;
+  bottom: 0 !important;
   left: auto !important;
   gap: 0.75rem;
   width: auto !important;
