@@ -22,14 +22,17 @@
         transform: translateY(-100%);
         z-index: 2;
         transition: transform 0.3s ease;
-        visibility: hidden;
-        pointer-events: none;
 
         @include mq($lg) {
             position: static;
             transform: translateY(0);
             visibility: visible;
             pointer-events: auto;
+        }
+        &[hidden]{
+            display: block;
+            visibility: hidden;
+            pointer-events: none;
         }
 
         &.is-active {

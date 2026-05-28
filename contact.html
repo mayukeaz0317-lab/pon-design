@@ -22,8 +22,8 @@
                         <img class="p-header-logo__img c-img" src="img/icon/logo.svg" alt="pon design">
                     </a>
                 </div>
-                <div class="p-header__nav-wrap">
-                    <nav class="p-header-nav" aria-label="グローバルナビゲーション">
+                <div class="p-header__nav-wrap" hidden>
+                    <nav id="global-nav" class="p-header-nav" aria-label="グローバルナビゲーション">
                         <ul class="p-header-nav__list">
                             <li class="p-header-nav__item"><a href="news-list.html" class="p-header-nav__link">news</a>
                             </li>
@@ -70,7 +70,8 @@
             <small class="p-footer__copyright">&copy;pon design</small>
         </div>
     </footer>
-    <button type="button" class="c-btn-top js-btn-top"></button>
+    <button type="button" class="c-btn-top js-btn-top" aria-label="ページトップへ戻る">
+    </button>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

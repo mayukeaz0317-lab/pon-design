@@ -506,6 +506,7 @@ th {
 
 .c-btn {
   display: block;
+  margin: 0 auto;
   position: relative;
   border-radius: 50px;
   padding: 1.125rem 0;
@@ -1100,8 +1101,6 @@ th {
   transform: translateY(-100%);
   z-index: 2;
   transition: transform 0.3s ease;
-  visibility: hidden;
-  pointer-events: none;
 }
 @media screen and (min-width: 1024px) {
   .p-header__nav-wrap {
@@ -1110,6 +1109,11 @@ th {
     visibility: visible;
     pointer-events: auto;
   }
+}
+.p-header__nav-wrap[hidden] {
+  display: block;
+  visibility: hidden;
+  pointer-events: none;
 }
 .p-header__nav-wrap.is-active {
   transform: translateY(0);
@@ -1573,11 +1577,6 @@ th {
     font-size: 0.9375rem;
     line-height: 1.8;
   }
-}
-
-.u-flex-center {
-  display: flex !important;
-  justify-content: center !important;
 }
 
 .u-mt-30 {
