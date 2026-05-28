@@ -1,0 +1,40 @@
+@use "../../global" as *;
+
+.p-pager {
+    display: flex;
+    justify-content: center;
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: rem(10);
+    }
+
+
+    &__number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: rem(45);
+
+        height: rem(45);
+        border-radius: 50%;
+        font-size: rem(20);
+        font-weight: 700;
+        background: linear-gradient(to right, #7633A4,#250d65);
+        color: #ffffff;
+        transition: background-color 0.3s ease, opacity 0.3s ease;
+
+        &:not(.is-current):hover {
+            opacity: 0.8;
+            background-color: #4c2893;
+        }
+
+        &.is-current {
+            background: #f1ebf8;
+            color: #333;
+            cursor: default;
+        }
+    }
+}

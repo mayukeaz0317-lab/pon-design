@@ -27,8 +27,7 @@
         @include mq($lg) {
             display: flex;
             gap: rem(20);
-
-
+            align-items: flex-start;
         }
     }
 
@@ -41,6 +40,8 @@
         @include mq($lg) {
             margin-bottom: 0;
             gap: rem(20);
+            flex-shrink: 0;
+
         }
     }
 

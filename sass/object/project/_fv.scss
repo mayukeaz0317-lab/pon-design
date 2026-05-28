@@ -1,8 +1,8 @@
 @use "../../global" as *;
 
-.p-fv {
+.p-fv-home {
     position: relative;
-    background-image: url(../../../img/photo/hero.jpg);
+    background-image: url(../../../img/photo/hero-home-sp.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     padding-left: rem(30);
@@ -11,7 +11,7 @@
     @include flex-center;
 
     @include mq($lg) {
-        background-image: url(../../../img/photo/hero-cp.jpg);
+        background-image: url(../../../img/photo/hero-home-cp.jpg);
         padding: rem(0);
     }
 
@@ -40,18 +40,18 @@
         letter-spacing: 0.1em;
 
         @include mq($lg) {
+            margin-bottom: rem(50);
             font-size: rem(24);
             line-height: lh(43.2, 24);
-            margin-bottom: rem(50);
         }
     }
 
-    &__link {
-        .c-btn {
-            border: 1px solid white;
-            background-image: none;
-        }
+
+    .c-btn {
+        border: 1px solid white;
+        background-image: none;
     }
+
 
     &__scroll {
         position: absolute;
@@ -65,14 +65,57 @@
         text-transform: uppercase;
 
         &::after {
-            content: "";
             position: absolute;
             top: calc(100% + 15px);
             right: 5px;
+            background-color: #fff;
             width: 1px;
             height: 50px;
-            background-color: #fff;
+            content: "";
 
         }
+    }
+}
+
+.p-fv {
+    background-image: url(../../../img/photo/hero-sp.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    height: rem(180);
+
+    @include mq($lg) {
+        background-image: url(../../../img/photo/hero-sp.jpg);
+        height: rem(240);
+    }
+
+    &__title {
+        color: #fff;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: rem(3);
+        padding-top: rem(82.5);
+
+        @include mq($lg) {
+            gap: rem(5);
+        }
+    }
+
+    &__main-title {
+        font-size: rem(30);
+        line-height: lh(36, 30);
+        text-transform: uppercase;
+
+        @include mq($lg) {
+            font-size: rem(36);
+            line-height: lh(43.2, 36);
+        }
+    }
+
+    &__sub-title {
+        font-size: rem(13);
+        line-height: lh(15.6, 13);
     }
 }

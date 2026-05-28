@@ -1,0 +1,54 @@
+@use "../../global" as *;
+
+.p-service-list {
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: rem(40);
+
+        @include mq($md) {
+            gap: re(60);
+        }
+    }
+
+    &__item {
+        @include mq($md) {
+            display: flex;
+            gap: rem(50);
+        }
+    }
+
+    &__thumb {
+        aspect-ratio: 345 / 216;
+        overflow: hidden;
+        margin-bottom: rem(20);
+        flex-shrink: 0;
+
+        @include mq($md) {
+            width: 40%;
+            margin-bottom: 0;
+        }
+    }
+
+    &__title {
+        font-size: rem(18);
+        line-height: lh(21.6, 18);
+        margin-bottom: rem(15);
+
+        @include mq($lg) {
+            font-size: rem(24);
+            line-height: lh(43.2, 24);
+            margin-bottom: rem(20);
+        }
+    }
+
+    &__desc {
+        font-size: rem(14);
+        line-height: lh(25.2, 14);
+
+        @include mq($lg) {
+            font-size: rem(15);
+            line-height: lh(27, 15);
+        }
+    }
+}

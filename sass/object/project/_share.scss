@@ -1,0 +1,83 @@
+@use "../../global" as *;
+
+.p-share{
+
+margin-bottom: rem(40);
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: rem(12);
+        list-style: none;
+    }
+
+    &__link {
+        @include flex-center;
+        gap: rem(5);
+        height: rem(40);
+        padding: 0 rem(16);
+        border-radius: rem(6);
+        color: #ffffff;
+        font-size: rem(14);
+        font-weight: 700;
+        text-decoration: none;
+        transition: opacity 0.3s;
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        /* 各SNSのブランドカラーを適用 */
+        &--facebook{
+            background-color: #0866FF;
+            /* Facebookブルー */
+        }
+
+        &--x {
+            background-color: #000;
+            /* Xの黒 */
+        }
+
+        &--hatena {
+            background-color: #00a4de;
+            /* はてブライトブルー */
+        }
+
+        &--line {
+            background-color: #06c755;
+            /* LINEグリーン */
+        }
+    }
+
+    &__text {
+        &--line {
+            text-transform: uppercase;
+        }
+    }
+
+    &__icon {
+        height: auto;
+
+        &--facebook {
+            width: rem(20);
+            color: #fff;
+        }
+
+        &--line {
+            color: #fff;
+            width: rem(22);
+        }
+
+        &--x {
+            width: rem(18);
+        }
+
+        &--like {
+            width: rem(18);
+        }
+
+        &--hatena {
+            width: rem(24);
+        }
+    }
+}

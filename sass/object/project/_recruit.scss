@@ -1,9 +1,11 @@
 @use "../../global" as *;
 .p-recruit{
     padding-top: rem(30);
+    padding-bottom: 0;
     @include mq($lg) {
         padding-top: rem(40);
-        padding-bottom: rem(110);
+        padding-bottom: 0;
+        
     }
     &__inner{
         @include mq($md) {

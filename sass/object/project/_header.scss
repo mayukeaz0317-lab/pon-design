@@ -12,18 +12,8 @@
         align-items: center;
     }
 
-    &__logo {
-        width: rem(120);
-        height: rem(12.96);
 
-        @include mq($lg) {
-            width: rem(160.92);
-            height: rem(17.38);
-        }
-    }
-
-
-    &__global-nav {
+    &__nav-wrap {
         position: fixed;
         top: 0;
         right: 0;
@@ -32,22 +22,32 @@
         transform: translateY(-100%);
         z-index: 2;
         transition: transform 0.3s ease;
+        visibility: hidden;
+        pointer-events: none;
 
         @include mq($lg) {
             position: static;
             transform: translateY(0);
+            visibility: visible;
+            pointer-events: auto;
         }
 
         &.is-active {
             transform: translateY(0);
+            visibility: visible;
+            pointer-events: auto;
         }
 
     }
 }
 
-.p-logo {
-    &__img {
-        display: block;
+.p-header-logo {
+    width: rem(120);
+    height: rem(12.96);
+
+    @include mq($lg) {
+        width: rem(160.92);
+        height: rem(17.38);
     }
 }
 
@@ -64,7 +64,7 @@
 
     &__list {
         flex-direction: column;
-        gap: rem(20);
+        gap: rem(25);
         color: #fff;
         @include flex-center;
 
@@ -84,7 +84,7 @@
             line-height: lh(25.2, 14);
         }
 
-        &::hover {
+        &:hover {
             border-bottom: 2px solid #fff;
         }
     }

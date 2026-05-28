@@ -17,36 +17,44 @@
     <header class="p-header l-header">
         <div class="p-header__inner l-inner">
             <div class="p-header__content">
-                <div class="p-header__logo">
-                    <h1 class="p-logo"><a class="p-logo__link" href="index.html"><img class="p-logo__img"
-                                src="img/icon/logo.svg" alt="pon design"></a></h1>
+                <div class="p-header-logo">
+                    <a class="p-header-logo__link" href="index.html">
+                        <img class="p-header-logo__img c-img" src="img/icon/logo.svg" alt="pon design">
+                    </a>
                 </div>
-                <div class="p-header__global-nav">
-                    <nav class="p-header-nav">
+                <div class="p-header__nav-wrap">
+                    <nav class="p-header-nav" aria-label="グローバルナビゲーション">
                         <ul class="p-header-nav__list">
-                            <li class="p-header-nav__item"><a href="" class="p-header-nav__link">news</a></li>
-                            <li class="p-header-nav__item"><a href="" class="p-header-nav__link">service</a></li>
-                            <li class="p-header-nav__item"><a href="" class="p-header-nav__link">works</a></li>
-                            <li class="p-header-nav__item"><a href="" class="p-header-nav__link">company</a></li>
-                            <li class="p-header-nav__item"><a href="" class="p-header-nav__link">recruit</a></li>
-                            <li class="p-header-nav__item"><a href="" class="p-header-nav__link">contact</a></li>
+                            <li class="p-header-nav__item"><a href="news-list.html" class="p-header-nav__link">news</a>
+                            </li>
+                            <li class="p-header-nav__item"><a href="service-list.html"
+                                    class="p-header-nav__link">service</a></li>
+                            <li class="p-header-nav__item"><a href="works-list.html"
+                                    class="p-header-nav__link">works</a></li>
+                            <li class="p-header-nav__item"><a href="company.html" class="p-header-nav__link">company</a>
+                            </li>
+                            <li class="p-header-nav__item"><a href="recruit.html" class="p-header-nav__link">recruit</a>
+                            </li>
+                            <li class="p-header-nav__item"><a href="contact.html" class="p-header-nav__link">contact</a>
+                            </li>
                         </ul>
                     </nav>
                 </div>
-                <button type="button" class="c-btn-menu js-btn-menu">
+                <button type="button" class="c-btn-menu js-btn-menu" aria-label="メニューを開く" aria-expanded="false"
+                    aria-controls="global-nav">
                     <span class="c-btn-menu__line"></span>
                 </button>
             </div>
         </div>
     </header>
     <main class="l-content">
-        <section class="p-fv">
-            <div class="p-fv__inner">
-                <h2 class="p-fv__title">web design specialist</h2>
-                <p class="p-fv__desc">お客様の夢を叶える<br class="u-sp-only">Webサイトを制作</p>
-                <div class="p-fv__link"><a class="c-btn" href="contact.html">contact</a></div>
+        <section class="p-fv-home">
+            <div class="p-fv-home__inner">
+                <h2 class="p-fv-home__title">web design specialist</h2>
+                <p class="p-fv-home__desc">お客様の夢を叶える<br class="u-sp-only">Webサイトを制作</p>
+                <a class="p-fv-home__link c-btn" href="contact.html">contact</a>
             </div>
-            <span class="p-fv__scroll">scroll</span>
+            <span class="p-fv-home__scroll">scroll</span>
         </section>
         <section class="p-news l-section">
             <div class="p-news__inner l-inner">
@@ -100,7 +108,8 @@
                         <a href="service-detail.html" class="p-service__link">
                             <div class="p-service__thumb">
                                 <img class="c-img p-service__img" src="img/photo/service01.jpg"
-                                    alt="制作したWEBサイトが表示されたデスクトップパソコン" width="350" height="220">
+                                    alt="制作したWEBサイトが表示されたデスクトップパソコン" width="350" height="220" loading="lazy"
+                                    decoding="async">
                             </div>
                             <div class="p-service__body">
                                 <h3 class="p-service__title">Webサイト制作</h3>
@@ -112,7 +121,8 @@
                         <a href="service-detail.html" class="p-service__link">
                             <div class="p-service__thumb">
                                 <img class="c-img p-service__img" src="img/photo/service02.jpg"
-                                    alt="アクセス解析のグラフやデータが表示された画面" width="350" height="220">
+                                    alt="アクセス解析のグラフやデータが表示された画面" width="350" height="220" loading="lazy"
+                                    decoding="async">
                             </div>
                             <div class="p-service__body">
                                 <h3 class="p-service__title">Webサイト運用</h3>
@@ -124,7 +134,7 @@
                         <a href="service-detail.html" class="p-service__link">
                             <div class="p-service__thumb">
                                 <img class="c-img p-service__img" src="img/photo/service03.jpg"
-                                    alt="スマートフォンでアプリを操作している手元" width="350" height="220">
+                                    alt="スマートフォンでアプリを操作している手元" width="350" height="220" loading="lazy" decoding="async">
                             </div>
                             <div class="p-service__body">
                                 <h3 class="p-service__title">アプリ開発</h3>
@@ -145,16 +155,16 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide p-works__slide">
                                 <img src="img/photo/works-slide01.jpg" alt="スムージストというスムージー専門店のWebサイトのトップページ"
-                                    class="c-img p-works__img" width="750" height="510">
+                                    class="c-img p-works__img" width="750" height="510" loading="lazy" decoding="async">
                             </div>
                             <div class="swiper-slide p-works__slide">
                                 <img src="img/photo/works-slide02.jpg"
                                     alt="総柄のシャツを着用した女性モデルのビジュアルが大きく写る、ラミナというファッションブランド「LAMINA」のWEBサイトのトップページ画面"
-                                    class="c-img p-works__img" width="750" height="510">
+                                    class="c-img p-works__img" width="750" height="510" loading="lazy" decoding="async">
                             </div>
                             <div class="swiper-slide p-works__slide">
                                 <img src="img/photo/works-slide03.jpg" alt="Web Conferenceというイベントの広告サイトの制作実績画面"
-                                    class="c-img p-works__img" width="750" height="510">
+                                    class="c-img p-works__img" width="750" height="510" loading="lazy" decoding="async">
                             </div>
                         </div>
                         <div class="swiper-button-prev p-works__arrow p-works__arrow--prev"></div>
@@ -201,7 +211,7 @@
             <div class="p-recruit__inner l-inner">
                 <div class="p-recruit__thumb">
                     <img src="img/photo/recruit.jpg" alt="二人の女性がホワイトボードに書かれているものを見ながら話し合っている" class="c-img" width="345"
-                        height="200">
+                        height="200" loading="lazy" decoding="async">
                 </div>
                 <div class="p-recruit__content">
                     <div class="p-recruit__heading">
@@ -234,7 +244,7 @@
     </main>
     <footer class="p-footer l-footer">
         <div class="p-footer__inner l-inner">
-            <nav class="p-footer-nav">
+            <nav class="p-footer-nav" aria-label="フッターナビゲーション">
                 <ul class="p-footer-nav__list">
                     <li class="p-footer-nav__item"><a href="index.html" class="p-footer-nav__link">home</a></li>
                     <li class="p-footer-nav__item"><a href="news-list.html" class="p-footer-nav__link">news</a></li>
