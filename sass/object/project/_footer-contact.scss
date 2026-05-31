@@ -1,0 +1,18 @@
+@use "../../global" as *;
+
+.p-footer-contact {
+    background-color: #f0f0f0;
+    margin-top: rem(40);
+
+    &__desc {
+        font-size: rem(14);
+        line-height: lh(25.2, 14);
+        font-weight: 400;
+        text-align: center;
+
+        @include mq($lg) {
+            font-size: rem(15);
+            line-height: lh(27, 15);
+        }
+    }
+}

@@ -1,0 +1,73 @@
+@use "../../global" as *;
+
+.p-recruit-job {
+
+    &__heading {
+        text-align: center;
+        margin-bottom: rem(30);
+        color: #391E88;
+        font-size: rem(24);
+        line-height: 1.0;
+        font-weight: bold;
+
+        @include mq($lg) {
+            font-size: rem(32);
+            margin-bottom: rem(22.6);
+        }
+    }
+
+    &__content {
+        padding: rem(20) rem(30);
+        border: 1px solid #B067CF;
+
+        @include mq($lg) {
+            padding: rem(60) rem(95);
+        }
+    }
+
+    &__job-title {
+        font-weight: bold;
+        font-size: rem(20);
+        line-height: lh(36, 20);
+        text-align: center;
+        margin-bottom: rem(30);
+
+        @include mq($lg) {
+            font-size: rem(24);
+            line-height: lh(43.2, 24);
+        }
+    }
+
+    &__row {
+        padding-bottom: rem(20);
+        border-bottom: 1px solid #DDDDDD;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: rem(5);
+
+        @include mq($md) {
+            grid-template-columns: 20% 1fr;
+            padding: rem(30) rem(10);
+        }
+    }
+
+    &__term {
+        font-weight: bold;
+
+        @include mq($md) {
+            font-weight: 400;
+        }
+    }
+
+    &__term,
+    &__desc {
+        font-size: rem(14);
+        line-height: lh(25.2, 14);
+    }
+    &__lead{
+        margin-bottom: rem(10);
+    }
+    &__requirements{
+        list-style: disc;
+    }
+}

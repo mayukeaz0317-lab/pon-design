@@ -1,0 +1,49 @@
+@use "../../global" as *;
+
+.p-recruit-concept {
+    padding-top: rem(60);
+
+    @include mq($lg) {
+        padding-top: rem(90);
+    }
+
+    &__inner {
+        text-align: center;
+    }
+
+    &__heading {
+        font-weight: bold;
+        font-size: rem(48);
+        line-height: lh(57.6, 48);
+        color: #391E88;
+        margin-bottom: rem(10);
+
+        @include mq($lg) {
+            font-size: rem(72);
+            line-height: 1.0;
+        }
+    }
+    &__sub-heading{
+        font-size: rem(18);
+        line-height: lh(32.4,18);
+        margin-bottom: rem(16);
+        @include mq($lg) {
+            font-size: rem(32);
+            line-height: lh(57.6,32);
+            margin-bottom: rem(20);
+        }
+    }
+    &__desc{
+        font-size: rem(15);
+        line-height: lh(27,15);
+        margin-bottom: rem(40);
+        @include mq($lg) {
+            font-size: rem(16);
+            line-height: lh(28.8,16);
+        }
+    }
+    &__img-wrap{
+        width: 100%;
+        clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+    }
+}

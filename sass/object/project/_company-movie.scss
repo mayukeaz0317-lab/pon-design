@@ -1,0 +1,27 @@
+@use "../../global" as *;
+
+.p-company-movie {
+    &__heading {
+        margin-bottom: rem(30);
+        color: #391E88;
+        font-size: rem(24);
+        line-height: 1.0;
+        font-weight: bold;
+        text-align: center;
+
+        @include mq($lg) {
+            margin-bottom: rem(40);
+            font-size: rem(32);
+        }
+    }
+
+    &__video-wrap {
+        width: 100%;
+        aspect-ratio: 345 / 194;
+        overflow: hidden;
+
+        @include mq($lg) {
+            aspect-ratio: 1110 / 624;
+        }
+    }
+}

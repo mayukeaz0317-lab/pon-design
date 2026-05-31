@@ -1,0 +1,117 @@
+@use "../../global" as *;
+
+.p-message {
+    @include mq($lg) {
+        padding: 0;
+    }
+    &__concept {
+        position: relative;
+        background-image: url(../../../img/photo/company-bg-sp.png);
+        text-align: center;
+        isolation: isolate;
+
+        @include mq($lg) {
+            background-image: none;
+            padding-top: rem(100);
+            padding-bottom: rem(130);
+        }
+
+
+        &::before {
+            background-image: none;
+
+            @include mq($lg) {
+                position: absolute;
+                z-index: -1;
+                inset: 0;
+                margin: 0 auto;
+                background-image: url(../../../img/photo/company-bg-cp.jpg);
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: min(100% - rem(30), rem(1300));
+                content: "";
+            }
+        }
+
+    }
+
+
+    &__inner {
+        position: relative;
+        z-index: 1;
+
+    }
+
+    &__heading {
+        margin-bottom: rem(34);
+        color: #391E88;
+        font-size: rem(24);
+        line-height: 1.0;
+        font-weight: bold;
+
+        @include mq($lg) {
+            font-size: rem(32);
+            line-height: lh(57.6, 32);
+        }
+    }
+
+    &__goal {
+        display: inline;
+        background: linear-gradient(transparent 70%, #FFF500 50%);
+        -webkit-box-decoration-break: clone;
+        font-weight: 700;
+        font-size: rem(32);
+        line-height: lh(48, 32);
+
+        @include mq($lg) {
+            font-size: rem(40);
+            line-height: 1.0;
+        }
+    }
+
+    &__desc {
+        margin-top: rem(40);
+        font-weight: 400;
+        font-size: rem(14);
+        line-height: lh(25.2, 14);
+
+        @include mq($lg) {
+            font-size: rem(15);
+            line-height: lh(27, 15);
+            padding-bottom: rem(70);
+        }
+    }
+
+    &__ceo {
+        display: flex;
+        flex-direction: column;
+        gap: rem(20);
+
+        @include mq($md) {
+            flex-direction: row;
+            gap: rem(50);
+        }
+    }
+
+    &__ceo-img {
+        aspect-ratio: 445 / 330;
+        width: 100%;
+        overflow: hidden;
+
+        @include mq($md) {
+            flex-shrink: 0;
+            width: calc((445px / 1100px) * 100%);
+        }
+    }
+
+    &__p,
+    &__name {
+        font-stretch: rem(14);
+        line-height: lh(25.2, 14);
+    }
+
+    &__p {
+        margin-bottom: rem(27);
+    }
+}

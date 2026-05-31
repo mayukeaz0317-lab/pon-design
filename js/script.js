@@ -24,17 +24,8 @@ $(function () {
     // body scroll lock
     $('body').addClass('is-menu-open');
 
-    // hidden解除
-    $navWrap.removeAttr('hidden');
+    $navWrap.addClass('is-active');
 
-    /**
-     * hidden解除直後は
-     * transitionが発火しない場合があるため
-     * 次フレームでclass付与
-     */
-    requestAnimationFrame(() => {
-      $navWrap.addClass('is-active');
-    });
 
     // 最初のリンクへfocus
     $navLinks.first().trigger('focus');
@@ -60,18 +51,6 @@ $(function () {
     // menu buttonへfocus戻す
     $menuButton.trigger('focus');
   }
-
-  /**
-   * transition終了後にhidden付与
-   * animation durationをJSに依存させない
-   */
-  $navWrap.on('transitionend', function () {
-
-    if (!$navWrap.hasClass('is-active')) {
-      $navWrap.attr('hidden', true);
-    }
-
-  });
 
   /**
    * Menu Toggle
@@ -112,6 +91,63 @@ $(function () {
   $navLinks.on('click', function () {
 
     closeMenu();
+
+  });
+  /**
+   * Focus Trap
+   */
+  $(document).on('keydown', function (e) {
+
+    const isExpanded =
+      $menuButton.attr('aria-expanded') === 'true';
+
+    // menu閉時は何もしない
+    if (!isExpanded) return;
+
+    // Tab以外は無視
+    if (e.key !== 'Tab') return;
+
+    /**
+     * focus対象
+     */
+    const focusableElements = [
+      $menuButton.get(0),
+      ...$navLinks.toArray(),
+    ];
+
+    const currentIndex =
+      focusableElements.indexOf(document.activeElement);
+
+    // focus外なら何もしない
+    if (currentIndex === -1) return;
+
+    e.preventDefault();
+
+    let nextIndex;
+
+    /**
+     * Shift + Tab
+     */
+    if (e.shiftKey) {
+
+      nextIndex =
+        currentIndex === 0
+          ? focusableElements.length - 1
+          : currentIndex - 1;
+
+    } else {
+
+      /**
+       * Tab
+       */
+      nextIndex =
+        currentIndex === focusableElements.length - 1
+          ? 0
+          : currentIndex + 1;
+
+    }
+
+    focusableElements[nextIndex].focus();
 
   });
 
