@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.p-fv__scroll::after {
+.p-fv-home__scroll::after {
   animation: scroll-line 2.5s cubic-bezier(0.25, 1, 0.5, 1) infinite;
 }
 
@@ -625,9 +625,13 @@ th {
 }
 .p-fv-home__inner {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: start;
+}
+@media screen and (min-width: 768px) {
+  .p-fv-home__inner {
+    align-items: center;
+  }
 }
 .p-fv-home__title {
   font-weight: bold;
@@ -658,6 +662,7 @@ th {
 .p-fv-home .c-btn {
   border: 1px solid white;
   background-image: none;
+  margin: 0;
 }
 .p-fv-home__scroll {
   position: absolute;
