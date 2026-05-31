@@ -1553,9 +1553,9 @@ th {
 }
 @media screen and (min-width: 1024px) {
   .p-post__meta {
-    margin-bottom: 0;
     gap: 1.25rem;
     flex-shrink: 0;
+    margin-bottom: 1.875rem;
   }
 }
 .p-post__time {
