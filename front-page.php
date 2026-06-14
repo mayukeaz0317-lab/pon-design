@@ -17,33 +17,47 @@
                 </h2>
             </div>
             <ul class="p-news__list">
-                <li class="p-news__item">
-                    <a href="<?php echo esc_url(home_url('/news-detail/')); ?>" class="p-news__link">
-                        <div class="p-news__meta">
-                            <time datetime="2030-02-01" class="p-news__time">2030.02.01</time>
-                            <span class="p-news__category">お知らせ</span>
-                        </div>
-                        <h3 class="p-news__title">Webデザインニュースサイト「ウェブマガジン」に取材いただきました</h3>
-                    </a>
-                </li>
-                <li class="p-news__item">
-                    <a href="<?php echo esc_url(home_url('/news-detail/')); ?>" class="p-news__link">
-                        <div class="p-news__meta">
-                            <time datetime="2030-02-01" class="p-news__time">2030.01.25</time>
-                            <span class="p-news__category">制作実績</span>
-                        </div>
-                        <h3 class="p-news__title">Smoothiesta様のWebサイトを制作いたしました</h3>
-                    </a>
-                </li>
-                <li class="p-news__item">
-                    <a href="<?php echo esc_url(home_url('/news-detail/')); ?>" class="p-news__link">
-                        <div class="p-news__meta">
-                            <time datetime="2030-02-01" class="p-news__time">2030.01.20</time>
-                            <span class="p-news__category">採用</span>
-                        </div>
-                        <h3 class="p-news__title">Smoothiesta様のWebサイトを制作いたしました</h3>
-                    </a>
-                </li>
+                <?php
+                $args = array(
+                    'post_type'      => 'post',
+                    'posts_per_page' => 3,
+                    'no_found_rows'  => true,
+                );
+
+                $news_query = new WP_Query($args);
+
+                if ($news_query->have_posts()) :
+                    while ($news_query->have_posts()) : $news_query->the_post();
+
+                        $permalink = esc_url(get_permalink());
+                        $date_dot  = get_the_date('Y.m.d');
+                        $date_dash = get_the_date('Y-m-d');
+                        $title     = get_the_title();
+
+                        $categories = get_the_category();
+                        $cat_name   = '未分類';
+                        if (! empty($categories)) {
+                            $cat_name = esc_html($categories[0]->name);
+                        }
+                ?>
+
+                        <li class="p-news__item">
+                            <a href="<?php echo $permalink; ?>" class="p-news__link">
+                                <div class="p-news__meta">
+                                    <time datetime="<?php echo $date_dash; ?>" class="p-news__time"><?php echo $date_dot; ?></time>
+                                    <span class="p-news__category"><?php echo $cat_name; ?></span>
+                                </div>
+                                <h3 class="p-news__title"><?php echo $title; ?></h3>
+                            </a>
+                        </li>
+
+                <?php
+                    endwhile;
+                    wp_reset_postdata();
+                else :
+                    echo '<li class="p-news__item" style="list-style:none;">現在、お知らせはありません。</li>';
+                endif;
+                ?>
             </ul>
         </div>
     </section>
