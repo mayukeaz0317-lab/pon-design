@@ -4,6 +4,7 @@
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web制作会社「pon design」の公式サイトです。お客様のビジネス課題を解決するホームページ制作、Webサイト設計、UI/UXデザイン、開発、運用まで幅広くサポート。最新の制作実績や採用情報も掲載しています。">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
