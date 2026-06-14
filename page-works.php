@@ -6,16 +6,7 @@
             <span class="p-fv__sub-title">制作実績</span>
         </div>
     </section>
-    <nav class="p-breadcrumbs" aria-label="パンくずリスト">
-        <div class="l-inner">
-            <div class="p-breadcrumbs__inner">
-                <ul class="p-breadcrumbs__list">
-                    <li class="p-breadcrumbs__item"><a href="<?php echo esc_url(home_url('/')); ?>" class="p-breadcrumbs__link">home</a></li>
-                    <li class="p-breadcrumbs__item" aria-current="page">works</li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <?php get_template_part('breadcrumb'); ?>
     <section class="p-works-list l-section">
         <h2 class="u-visually-hidden">制作実績一覧</h2>
         <div class="p-works-list__inner l-inner">

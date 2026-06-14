@@ -6,16 +6,7 @@
             <span class="p-fv__sub-title">お問い合わせ</span>
         </div>
     </section>
-    <nav class="p-breadcrumbs" aria-label="パンくずリスト">
-        <div class="l-inner">
-            <div class="p-breadcrumbs__inner">
-                <ul class="p-breadcrumbs__list">
-                    <li class="p-breadcrumbs__item"><a href="<?php echo esc_url(home_url('/')); ?>" class="p-breadcrumbs__link">home</a></li>
-                    <li class="p-breadcrumbs__item" aria-current="page">contact</li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <?php get_template_part('breadcrumb'); ?>
     <section class="p-contact l-section">
         <div class="p-contact-inner l-inner--narrow">
             <h2 class="u-visually-hidden">お問い合わせフォーム</h2>

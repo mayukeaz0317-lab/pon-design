@@ -6,18 +6,7 @@
             <span class="p-fv__sub-title">お知らせ</span>
         </div>
     </section>
-    <nav class="p-breadcrumbs" aria-label="パンくずリスト">
-        <div class="l-inner">
-            <div class="p-breadcrumbs__inner">
-                <ul class="p-breadcrumbs__list">
-                    <li class="p-breadcrumbs__item"><a href="<?php echo esc_url(home_url('/')); ?>" class="p-breadcrumbs__link">home</a></li>
-                    <li class="p-breadcrumbs__item"><a href="<?php echo esc_url(home_url('/news-detail/')); ?>" class="p-breadcrumbs__link">news</a>
-                    </li>
-                    <li class="p-breadcrumbs__item" aria-current="page">Webデザインニュースサイト「ウェブマガジン」に取材いただきました</li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <?php get_template_part('breadcrumb'); ?>
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
             <article class="p-post l-section">
                 <div class="l-inner p-post__inner">
