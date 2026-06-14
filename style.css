@@ -529,7 +529,7 @@ th {
   top: 50%;
   right: 21px;
   transform: translateY(-50%);
-  background-image: url(../../../img/icon/right-arrow.svg);
+  background-image: url(img/icon/right-arrow.svg);
   background-repeat: no-repeat;
   width: 8.41px;
   height: 20px;
@@ -581,7 +581,7 @@ th {
   border: none;
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  background-image: url(../../../img/icon/solid_arrow-up_15px.svg);
+  background-image: url(img/icon/solid_arrow-up_15px.svg);
   background-repeat: no-repeat;
   background-position: center;
   opacity: 0;
@@ -607,7 +607,7 @@ th {
 
 .p-fv-home {
   position: relative;
-  background-image: url(../../../img/photo/hero-home-sp.jpg);
+  background-image: url(img/photo/hero-home-sp.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   padding-left: 1.875rem;
@@ -619,7 +619,7 @@ th {
 }
 @media screen and (min-width: 1024px) {
   .p-fv-home {
-    background-image: url(../../../img/photo/hero-home-cp.jpg);
+    background-image: url(img/photo/hero-home-cp.jpg);
     padding: 0rem;
   }
 }
@@ -686,7 +686,7 @@ th {
 }
 
 .p-fv {
-  background-image: url(../../../img/photo/hero-sp.jpg);
+  background-image: url(img/photo/hero-sp.jpg);
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -694,7 +694,7 @@ th {
 }
 @media screen and (min-width: 1024px) {
   .p-fv {
-    background-image: url(../../../img/photo/hero-sp.jpg);
+    background-image: url(img/photo/hero-sp.jpg);
     height: 15rem;
   }
 }
@@ -980,7 +980,7 @@ th {
 }
 .p-message__concept {
   position: relative;
-  background-image: url(../../../img/photo/company-bg-sp.png);
+  background-image: url(img/photo/company-bg-sp.png);
   text-align: center;
   isolation: isolate;
 }
@@ -1000,7 +1000,7 @@ th {
     z-index: -1;
     inset: 0;
     margin: 0 auto;
-    background-image: url(../../../img/photo/company-bg-cp.jpg);
+    background-image: url(img/photo/company-bg-cp.jpg);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;

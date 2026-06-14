@@ -1,52 +1,4 @@
-<!DOCTYPE html>
-<html lang="ja">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pon Design</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-</head>
-
-<body>
-    <header class="p-header l-header">
-        <div class="p-header__inner l-inner">
-            <div class="p-header__content">
-                <div class="p-header-logo">
-                    <a class="p-header-logo__link" href="index.html">
-                        <img class="p-header-logo__img c-img" src="img/icon/logo.svg" alt="pon design">
-                    </a>
-                </div>
-                <div class="p-header__nav-wrap">
-                    <nav id="global-nav" class="p-header-nav" aria-label="グローバルナビゲーション">
-                        <ul class="p-header-nav__list">
-                            <li class="p-header-nav__item"><a href="news-list.html" class="p-header-nav__link">news</a>
-                            </li>
-                            <li class="p-header-nav__item"><a href="service-list.html"
-                                    class="p-header-nav__link">service</a></li>
-                            <li class="p-header-nav__item"><a href="works-list.html"
-                                    class="p-header-nav__link">works</a></li>
-                            <li class="p-header-nav__item"><a href="company.html" class="p-header-nav__link">company</a>
-                            </li>
-                            <li class="p-header-nav__item"><a href="recruit.html" class="p-header-nav__link">recruit</a>
-                            </li>
-                            <li class="p-header-nav__item"><a href="contact.html" class="p-header-nav__link">contact</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-                <button type="button" class="c-btn-menu js-btn-menu" aria-label="メニューを開く" aria-expanded="false"
-                    aria-controls="global-nav">
-                    <span class="c-btn-menu__line"></span>
-                </button>
-            </div>
-        </div>
-    </header>
+<?php get_header(); ?>
     <main class="l-content">
         <section class="p-fv">
             <div class="p-fv__title">
@@ -58,7 +10,7 @@
             <div class="l-inner">
                 <div class="p-breadcrumbs__inner">
                     <ul class="p-breadcrumbs__list">
-                        <li class="p-breadcrumbs__item"><a href="index.html" class="p-breadcrumbs__link">home</a></li>
+                        <li class="p-breadcrumbs__item"><a href="<?php echo esc_url(home_url('/')); ?>" class="p-breadcrumbs__link">home</a></li>
                         <li class="p-breadcrumbs__item" aria-current="page">recruit</li>
                     </ul>
                 </div>
@@ -72,7 +24,7 @@
                 <p class="p-recruit-concept__desc">心を弾ましながら<br>夢いっぱいのサイトを作ろう！<br>お客様も自分もみんなが幸せになれるように</p>
             </div>
             <div class="p-recruit-concept__img-wrap">
-                <img src="img/photo/recruit-concept.jpg" alt="笑顔で談笑する3人の社員" class="c-img" width="2880" height="1649"
+                <img src="<?php echo esc_url(get_theme_file_uri('/img/photo/recruit-concept.jpg')); ?>" alt="笑顔で談笑する3人の社員" class="c-img" width="2880" height="1649"
                     decoding="async">
             </div>
         </section>
@@ -123,8 +75,8 @@
                 <h2 class="p-company-movie__heading">社内ムービー</h2>
                 <div class="p-company-movie__video-wrap">
                     <video class="c-video" controls preload="metadata" playsinline
-                        poster="img/photo/office-thumb.jpg" width="1280" height="720">
-                        <source src="video/office.mp4" type="video/mp4">
+                        poster="<?php echo esc_url(get_theme_file_uri('/img/photo/office-thumb.jpg')); ?>" width="1280" height="720">
+                        <source src="<?php echo esc_url(get_theme_file_uri('/video/office.mp4')); ?>" type="video/mp4">
                         お使いのブラウザは動画再生に対応しておりません。
                     </video>
                 </div>
@@ -140,38 +92,9 @@
                 </div>
                 <p class="p-footer-contact__desc">Webサイトの制作のご依頼やお見積りなど、お気軽にご相談ください。</p>
                 <div class=" u-mt-30">
-                    <a href="contact.html" class="c-btn">more</a>
+                    <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="c-btn">more</a>
                 </div>
             </div>
         </section>
     </main>
-    <footer class="p-footer l-footer">
-        <div class="p-footer__inner l-inner">
-            <nav class="p-footer-nav" aria-label="フッターナビゲーション">
-                <ul class="p-footer-nav__list">
-                    <li class="p-footer-nav__item"><a href="index.html" class="p-footer-nav__link">home</a></li>
-                    <li class="p-footer-nav__item"><a href="news-list.html" class="p-footer-nav__link">news</a></li>
-                    <li class="p-footer-nav__item"><a href="service-list.html" class="p-footer-nav__link">service</a>
-                    </li>
-                    <li class="p-footer-nav__item"><a href="works-list.html" class="p-footer-nav__link">works</a>
-                    </li>
-                    <li class="p-footer-nav__item"><a href="company.html" class="p-footer-nav__link">company</a>
-                    </li>
-                    <li class="p-footer-nav__item"><a href="recruit.html" class="p-footer-nav__link">recruit</a>
-                    </li>
-                    <li class="p-footer-nav__item"><a href="contact.html" class="p-footer-nav__link">contact</a>
-                    </li>
-                </ul>
-            </nav>
-            <small class="p-footer__copyright">&copy;pon design</small>
-        </div>
-    </footer>
-    <button type="button" class="c-btn-top js-btn-top" aria-label="ページトップへ戻る">
-    </button>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="js/script.js"></script>
-</body>
-
-</html>
+<?php get_footer(); ?>
