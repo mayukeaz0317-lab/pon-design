@@ -22,31 +22,31 @@
             <ul class="p-works-list__list">
                 <li class="p-works-list__item">
                     <div class="p-works-list__thumb">
-                        <img src="<?php echo esc_url(get_theme_file_uri('/img/photo/works-slide01.jpg')); ?>" alt="スムージストというスムージー専門店のWebサイトのトップページ" class="c-img" width="1500" height="1020" decoding="async">
+                        <img src="<?php echo esc_url(get_theme_file_uri('/img/photo/works-slide01.webp')); ?>" alt="スムージストというスムージー専門店のWebサイトのトップページ" class="c-img" width="1500" height="1020" decoding="async">
                     </div>
                     <h3 class="p-works-list__title">Smoothiesta 様</h3>
                 </li>
                 <li class="p-works-list__item">
                     <div class="p-works-list__thumb">
-                        <img src="<?php echo esc_url(get_theme_file_uri('/img/photo/works-slide02.jpg')); ?>" alt="総柄のシャツを着用した女性モデルのビジュアルが大きく写る、ラミナというファッションブランド「LAMINA」のWEBサイトのトップページ画面" class="c-img" width="1500" height="1020" decoding="async">
+                        <img src="<?php echo esc_url(get_theme_file_uri('/img/photo/works-slide02.webp')); ?>" alt="総柄のシャツを着用した女性モデルのビジュアルが大きく写る、ラミナというファッションブランド「LAMINA」のWEBサイトのトップページ画面" class="c-img" width="1500" height="1020" decoding="async">
                     </div>
                     <h3 class="p-works-list__title">Web Conference 様</h3>
                 </li>
                 <li class="p-works-list__item">
                     <div class="p-works-list__thumb">
-                        <img src="<?php echo esc_url(get_theme_file_uri('/img/photo/works-slide03.jpg')); ?>" alt="Web Conferenceというイベントの広告サイトの制作実績画面" class="c-img" width="1500" height="1020" decoding="async">
+                        <img src="<?php echo esc_url(get_theme_file_uri('/img/photo/works-slide03.webp')); ?>" alt="Web Conferenceというイベントの広告サイトの制作実績画面" class="c-img" width="1500" height="1020" decoding="async">
                     </div>
                     <h3 class="p-works-list__title">LAMINA 様</h3>
                 </li>
                 <li class="p-works-list__item">
                     <div class="p-works-list__thumb">
-                        <img src="<?php echo esc_url(get_theme_file_uri('/img/photo/works-slide04.jpg')); ?>" alt="Web Conferenceというイベントの広告サイトの制作実績画面" class="c-img" width="700" height="476" decoding="async">
+                        <img src="<?php echo esc_url(get_theme_file_uri('/img/photo/works-slide04.webp')); ?>" alt="Web Conferenceというイベントの広告サイトの制作実績画面" class="c-img" width="700" height="476" decoding="async">
                     </div>
                     <h3 class="p-works-list__title">CITYLab 様</h3>
                 </li>
                 <li class="p-works-list__item">
                     <div class="p-works-list__thumb">
-                        <img src="<?php echo esc_url(get_theme_file_uri('/img/photo/works-slide05.jpg')); ?>" alt="Web Conferenceというイベントの広告サイトの制作実績画面" class="c-img" width="700" height="476" decoding="async">
+                        <img src="<?php echo esc_url(get_theme_file_uri('/img/photo/works-slide05.webp')); ?>" alt="Web Conferenceというイベントの広告サイトの制作実績画面" class="c-img" width="700" height="476" decoding="async">
                     </div>
                     <h3 class="p-works-list__title">TABILOG 様</h3>
                 </li>

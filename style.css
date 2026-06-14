@@ -607,7 +607,7 @@ th {
 
 .p-fv-home {
   position: relative;
-  background-image: url(img/photo/hero-home-sp.jpg);
+  background-image: url(img/photo/hero-home-sp.webp);
   background-size: cover;
   background-repeat: no-repeat;
   padding-left: 1.875rem;
@@ -619,7 +619,7 @@ th {
 }
 @media screen and (min-width: 1024px) {
   .p-fv-home {
-    background-image: url(img/photo/hero-home-cp.jpg);
+    background-image: url(img/photo/hero-home-cp.webp);
     padding: 0rem;
   }
 }
@@ -686,7 +686,7 @@ th {
 }
 
 .p-fv {
-  background-image: url(img/photo/hero-sp.jpg);
+  background-image: url(img/photo/hero-sp.webp);
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -694,7 +694,7 @@ th {
 }
 @media screen and (min-width: 1024px) {
   .p-fv {
-    background-image: url(img/photo/hero-sp.jpg);
+    background-image: url(img/photo/hero-sp.webp);
     height: 15rem;
   }
 }
@@ -1000,7 +1000,7 @@ th {
     z-index: -1;
     inset: 0;
     margin: 0 auto;
-    background-image: url(img/photo/company-bg-cp.jpg);
+    background-image: url(img/photo/company-bg-cp.webp);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;

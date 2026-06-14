@@ -22,7 +22,7 @@
                 <ul class="p-service-list__list">
                     <li class="p-service-list__item">
                         <div class="p-service-list__thumb">
-                            <img src="<?php echo esc_url(get_theme_file_uri('/img/photo/service01.jpg')); ?>" alt="制作したWEBサイトが表示されたデスクトップパソコン" class="c-img"
+                            <img src="<?php echo esc_url(get_theme_file_uri('/img/photo/service01.webp')); ?>" alt="制作したWEBサイトが表示されたデスクトップパソコン" class="c-img"
                                 width="345" height="217" decoding="async">
                         </div>
                         <div class="p-service-list__content">
@@ -35,7 +35,7 @@
                     </li>
                     <li class="p-service-list__item">
                         <div class="p-service-list__thumb">
-                            <img src="<?php echo esc_url(get_theme_file_uri('/img/photo/service02.jpg')); ?>" alt="アクセス解析のグラフやデータが表示された画面" class="c-img" width="345"
+                            <img src="<?php echo esc_url(get_theme_file_uri('/img/photo/service02.webp')); ?>" alt="アクセス解析のグラフやデータが表示された画面" class="c-img" width="345"
                                 height="217" decoding="async">
                         </div>
                         <div class="p-service-list__content">
@@ -48,7 +48,7 @@
                     </li>
                     <li class="p-service-list__item">
                         <div class="p-service-list__thumb">
-                            <img src="<?php echo esc_url(get_theme_file_uri('/img/photo/service03.jpg')); ?>" alt="スマートフォンでアプリを操作している手元" class="c-img" width="345"
+                            <img src="<?php echo esc_url(get_theme_file_uri('/img/photo/service03.webp')); ?>" alt="スマートフォンでアプリを操作している手元" class="c-img" width="345"
                                 height="216" decoding="async">
                         </div>
                         <div class="p-service-list__content">

@@ -58,7 +58,7 @@
             <ul class="p-service__list">
                 <li class="p-service__item">
                     <div class="p-service__thumb">
-                        <img class="c-img p-service__img" src="<?php echo esc_url(get_theme_file_uri('/img/photo/service01.jpg')); ?>"
+                        <img class="c-img p-service__img" src="<?php echo esc_url(get_theme_file_uri('/img/photo/service01.webp')); ?>"
                             alt="制作したWEBサイトが表示されたデスクトップパソコン" width="350" height="220" loading="lazy"
                             decoding="async">
                     </div>
@@ -69,7 +69,7 @@
                 </li>
                 <li class="p-service__item">
                     <div class="p-service__thumb">
-                        <img class="c-img p-service__img" src="<?php echo esc_url(get_theme_file_uri('/img/photo/service02.jpg')); ?>" alt="アクセス解析のグラフやデータが表示された画面"
+                        <img class="c-img p-service__img" src="<?php echo esc_url(get_theme_file_uri('/img/photo/service02.webp')); ?>" alt="アクセス解析のグラフやデータが表示された画面"
                             width="350" height="220" loading="lazy" decoding="async">
                     </div>
                     <div class="p-service__body">
@@ -79,7 +79,7 @@
                 </li>
                 <li class="p-service__item">
                     <div class="p-service__thumb">
-                        <img class="c-img p-service__img" src="<?php echo esc_url(get_theme_file_uri('/img/photo/service03.jpg')); ?>" alt="スマートフォンでアプリを操作している手元"
+                        <img class="c-img p-service__img" src="<?php echo esc_url(get_theme_file_uri('/img/photo/service03.webp')); ?>" alt="スマートフォンでアプリを操作している手元"
                             width="350" height="220" loading="lazy" decoding="async">
                     </div>
                     <div class="p-service__body">
@@ -99,16 +99,16 @@
                 <div class="swiper p-works__slider">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide p-works__slide">
-                            <img src="<?php echo esc_url(get_theme_file_uri('/img/photo/works-slide01.jpg')); ?>" alt="スムージストというスムージー専門店のWebサイトのトップページ"
+                            <img src="<?php echo esc_url(get_theme_file_uri('/img/photo/works-slide01.webp')); ?>" alt="スムージストというスムージー専門店のWebサイトのトップページ"
                                 class="c-img p-works__img" width="750" height="510" loading="lazy" decoding="async">
                         </div>
                         <div class="swiper-slide p-works__slide">
-                            <img src="<?php echo esc_url(get_theme_file_uri('/img/photo/works-slide02.jpg')); ?>"
+                            <img src="<?php echo esc_url(get_theme_file_uri('/img/photo/works-slide02.webp')); ?>"
                                 alt="総柄のシャツを着用した女性モデルのビジュアルが大きく写る、ラミナというファッションブランド「LAMINA」のWEBサイトのトップページ画面"
                                 class="c-img p-works__img" width="750" height="510" loading="lazy" decoding="async">
                         </div>
                         <div class="swiper-slide p-works__slide">
-                            <img src="<?php echo esc_url(get_theme_file_uri('/img/photo/works-slide03.jpg')); ?>" alt="Web Conferenceというイベントの広告サイトの制作実績画面"
+                            <img src="<?php echo esc_url(get_theme_file_uri('/img/photo/works-slide03.webp')); ?>" alt="Web Conferenceというイベントの広告サイトの制作実績画面"
                                 class="c-img p-works__img" width="750" height="510" loading="lazy" decoding="async">
                         </div>
                     </div>
@@ -157,7 +157,7 @@
     <section class="p-recruit l-section">
         <div class="p-recruit__inner l-inner">
             <div class="p-recruit__thumb">
-                <img src="<?php echo esc_url(get_theme_file_uri('/img/photo/recruit.jpg')); ?>" alt="二人の女性がホワイトボードに書かれているものを見ながら話し合っている" class="c-img" width="345"
+                <img src="<?php echo esc_url(get_theme_file_uri('/img/photo/recruit.webp')); ?>" alt="二人の女性がホワイトボードに書かれているものを見ながら話し合っている" class="c-img" width="345"
                     height="200" loading="lazy" decoding="async">
             </div>
             <div class="p-recruit__content">

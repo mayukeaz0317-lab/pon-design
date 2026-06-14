@@ -24,7 +24,7 @@
                 <p class="p-recruit-concept__desc">心を弾ましながら<br>夢いっぱいのサイトを作ろう！<br>お客様も自分もみんなが幸せになれるように</p>
             </div>
             <div class="p-recruit-concept__img-wrap">
-                <img src="<?php echo esc_url(get_theme_file_uri('/img/photo/recruit-concept.jpg')); ?>" alt="笑顔で談笑する3人の社員" class="c-img" width="2880" height="1649"
+                <img src="<?php echo esc_url(get_theme_file_uri('/img/photo/recruit-concept.webp')); ?>" alt="笑顔で談笑する3人の社員" class="c-img" width="2880" height="1649"
                     decoding="async">
             </div>
         </section>
@@ -75,7 +75,7 @@
                 <h2 class="p-company-movie__heading">社内ムービー</h2>
                 <div class="p-company-movie__video-wrap">
                     <video class="c-video" controls preload="metadata" playsinline
-                        poster="<?php echo esc_url(get_theme_file_uri('/img/photo/office-thumb.jpg')); ?>" width="1280" height="720">
+                        poster="<?php echo esc_url(get_theme_file_uri('/img/photo/office-thumb.webp')); ?>" width="1280" height="720">
                         <source src="<?php echo esc_url(get_theme_file_uri('/video/office.mp4')); ?>" type="video/mp4">
                         お使いのブラウザは動画再生に対応しておりません。
                     </video>

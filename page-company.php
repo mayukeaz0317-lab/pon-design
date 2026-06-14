@@ -29,7 +29,7 @@
             </div>
             <div class="p-message__ceo">
                 <div class="p-message__ceo-img">
-                    <img src="<?php echo esc_url(get_theme_file_uri('/img/photo/CEO.jpg')); ?>" alt="代表取締役社長 猫山ポン太郎の近影" class="c-img" width="890" width="660"
+                    <img src="<?php echo esc_url(get_theme_file_uri('/img/photo/CEO.webp')); ?>" alt="代表取締役社長 猫山ポン太郎の近影" class="c-img" width="890" width="660"
                         decoding="async">
                 </div>
                 <div class="p-message__ceo-desc">
