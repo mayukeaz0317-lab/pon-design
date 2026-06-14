@@ -1,0 +1,15 @@
+# 〜上の部分はさっきと同じなので省略〜
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v4
+
+    - name: 🚀 Sync files to ConoHa
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: ./ 
+        
+        # 💡 【これを追加！】ConoHa側の「pon-design」フォルダの中に直接入れるように指定します
+        server-dir: ./pon-design/
