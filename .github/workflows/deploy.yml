@@ -9,7 +9,6 @@
         server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: ./ 
-        
+        local-dir: ./
         # 💡 【これを追加！】ConoHa側の「pon-design」フォルダの中に直接入れるように指定します
         server-dir: ./pon-design/
