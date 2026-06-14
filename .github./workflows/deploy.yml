@@ -1,4 +1,14 @@
-# 〜上の部分はさっきと同じなので省略〜
+name: Deploy to ConoHa WING
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  web-deploy:
+    name: 🎉 Deploying lasted code
+    runs-on: ubuntu-latest
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v4
@@ -10,5 +20,4 @@
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./
-        # 💡 【これを追加！】ConoHa側の「pon-design」フォルダの中に直接入れるように指定します
         server-dir: ./pon-design/
