@@ -1778,6 +1778,7 @@ th {
   width: min(100% - 1.875rem, 45rem);
 }
 .p-works-detail__thumb {
+  aspect-ratio: 1500/1020;
   width: 100%;
   margin-bottom: 1.25rem;
 }

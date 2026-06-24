@@ -22,9 +22,15 @@
                         <header class="p-works-detail__header">
                             <h1 class="p-works-detail__title"><?php echo esc_html(get_the_title()); ?></h1>
                             <?php if (has_post_thumbnail()) : ?>
-                                <div class="p-works-detail__thumb">
-                                    <?php the_post_thumbnail('large', array('class' => 'c-img', 'decoding' => 'async')); ?>
-                                </div>
+                                <figure class="p-works-detail__thumb">
+                                    <?php
+                                    the_post_thumbnail('large', [
+                                        'class'         => 'c-img',
+                                        'decoding'      => 'async',
+                                        'fetchpriority' => 'high'
+                                    ]);
+                                    ?>
+                                </figure>
                             <?php endif; ?>
                         </header>
 

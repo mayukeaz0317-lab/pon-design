@@ -23,8 +23,15 @@
                         </div>
                         <figure class="p-post__thumb">
                             <?php if (has_post_thumbnail()) : ?>
-                                <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title_attribute(); ?>"
-                                    class="p-post__img c-img" width="345" height="184" decoding="async" fetchpriority="high">
+                                <?php
+                                the_post_thumbnail('large', [
+                                    'class'         => 'p-post__img c-img',
+                                    'width'         => '345',
+                                    'height'        => '184',
+                                    'decoding'      => 'async',
+                                    'fetchpriority' => 'high'
+                                ]);
+                                ?>
                             <?php else : ?>
                                 <img src="<?php echo esc_url(get_theme_file_uri('/img/photo/news_article.webp')); ?>" alt=""
                                     class="p-post__img c-img" width="345" height="184" decoding="async" fetchpriority="high">

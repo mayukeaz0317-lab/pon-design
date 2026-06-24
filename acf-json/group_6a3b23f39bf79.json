@@ -95,27 +95,6 @@
             "append": ""
         },
         {
-            "key": "field_6a3b50b3bac26",
-            "label": "サービスの詳細 (コピー)",
-            "name": "works_detail_コピー",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
             "key": "field_6a3b2a2fd1902",
             "label": "制作費",
             "name": "works_price",
@@ -160,5 +139,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1782272415
+    "modified": 1782273109
 }
