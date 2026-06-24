@@ -24,23 +24,21 @@
             <?php if ($works_query->have_posts()) : ?>
                 <ul class="p-works-list__list">
                     <?php while ($works_query->have_posts()) : $works_query->the_post(); ?>
-                        <?php
-                        $thumb_url = get_the_post_thumbnail_url(get_the_ID(), 'medium_large');
-                        if (empty($thumb_url)) {
-                            $thumb_url = get_theme_file_uri('/img/photo/works-slide01.webp');
-                        }
-                        ?>
                         <li class="p-works-list__item">
                             <a href="<?php the_permalink(); ?>" class="p-works-list__link">
-                                <div class="p-works-list__thumb">
-                                    <img
-                                        src="<?php echo esc_url($thumb_url); ?>"
-                                        alt="<?php the_title_attribute(); ?>"
-                                        class="c-img"
-                                        width="1500"
-                                        height="1020"
-                                        decoding="async">
-                                </div>
+                                <figure class="p-works-list__thumb">
+                                    <?php if (has_post_thumbnail()) : ?>
+                                        <?php
+                                        the_post_thumbnail('medium_large', [
+                                            'class'    => 'c-img',
+                                            'decoding' => 'async'
+                                        ]);
+                                        ?>
+                                    <?php else : ?>
+                                        <img src="<?php echo esc_url(get_theme_file_uri('/img/photo/works-slide01.webp')); ?>" alt=""
+                                            class="c-img" width="1500" height="1020" decoding="async">
+                                    <?php endif; ?>
+                                </figure>
                                 <h3 class="p-works-list__title"><?php echo esc_html(get_the_title()); ?></h3>
                             </a>
                         </li>
