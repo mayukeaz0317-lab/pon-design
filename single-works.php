@@ -2,7 +2,7 @@
 <main class="l-content">
     <section class="p-fv">
         <div class="p-fv__title">
-            <h1 class="p-fv__main-title">works</h1>
+            <div class="p-fv__main-title">works</div>
             <span class="p-fv__sub-title">制作実績</span>
         </div>
     </section>
