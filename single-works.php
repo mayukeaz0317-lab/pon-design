@@ -7,7 +7,7 @@
         </div>
     </section>
     <?php get_template_part('breadcrumb'); ?>
-    <<main class="l-main">
+    <main class="l-main">
         <?php
         if (have_posts()) :
             while (have_posts()) : the_post();
