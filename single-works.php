@@ -17,7 +17,7 @@
                 $period   = get_field('works_period');
                 $detail   = get_field('works_detail');
         ?>
-                <article class="p-works-detail">
+                <article class="p-works-detail l-section">
                     <div class="l-inner p-works-detail__inner">
                         <header class="p-works-detail__header">
                             <h1 class="p-works-detail__title"><?php echo esc_html(get_the_title()); ?></h1>
