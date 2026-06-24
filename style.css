@@ -1760,13 +1760,199 @@ th {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+.p-works-list__link {
+  display: block;
+}
 .p-works-list__thumb {
+  aspect-ratio: 1500/1020;
+  width: 100%;
   margin-bottom: 0.9375rem;
 }
 .p-works-list__title {
   font-size: 1rem;
   line-height: 1.8;
   text-align: center;
+}
+
+.p-works-detail__inner {
+  width: min(100% - 1.875rem, 45rem);
+}
+.p-works-detail__thumb {
+  width: 100%;
+  margin-bottom: 1.25rem;
+}
+.p-works-detail__title {
+  font-size: 1.375rem;
+  line-height: 1.5;
+  margin-bottom: 0.625rem;
+}
+@media screen and (min-width: 1024px) {
+  .p-works-detail__title {
+    font-size: 2rem;
+    line-height: 1.5;
+  }
+}
+.p-works-detail__body {
+  display: grid;
+  gap: 2rem;
+}
+@media screen and (min-width: 1024px) {
+  .p-works-detail__body {
+    gap: 2.75rem;
+  }
+}
+.p-works-detail__table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  border: 1px solid #dce3ea;
+  border-radius: 0.5rem;
+  background-color: #ffffff;
+  box-shadow: 0 0.625rem 1.875rem rgba(24, 35, 48, 0.06);
+}
+.p-works-detail__row {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media screen and (min-width: 1024px) {
+  .p-works-detail__row {
+    grid-template-columns: 11.875rem 1fr;
+  }
+}
+.p-works-detail__row:not(:last-child) th,
+.p-works-detail__row:not(:last-child) td {
+  border-bottom: 1px solid #dce3ea;
+}
+.p-works-detail__heading, .p-works-detail__data {
+  padding: 0.9375rem 1.125rem;
+  font-size: 0.875rem;
+  line-height: 1.7142857143;
+  text-align: left;
+  vertical-align: top;
+}
+@media screen and (min-width: 1024px) {
+  .p-works-detail__heading, .p-works-detail__data {
+    padding: 1.125rem 1.375rem;
+    font-size: 0.9375rem;
+    line-height: 1.7333333333;
+  }
+}
+.p-works-detail__heading {
+  font-weight: 700;
+  color: #334155;
+  background-color: #f1f5f7;
+}
+@media screen and (min-width: 1024px) {
+  .p-works-detail__heading {
+    border-right: 1px solid #dce3ea;
+  }
+}
+.p-works-detail__data {
+  color: #1f2933;
+  background-color: #ffffff;
+}
+.p-works-detail__point {
+  padding: 1.5rem 1.25rem;
+  border-left: 0.25rem solid #2f6f73;
+  border-radius: 0 0.5rem 0.5rem 0;
+  background-color: #f6faf9;
+}
+@media screen and (min-width: 1024px) {
+  .p-works-detail__point {
+    padding: 1.875rem 2.125rem;
+  }
+}
+.p-works-detail__point-title {
+  margin-bottom: 0.875rem;
+  font-size: 1.125rem;
+  line-height: 1.5555555556;
+  font-weight: 700;
+  letter-spacing: 0;
+  color: #111827;
+}
+@media screen and (min-width: 1024px) {
+  .p-works-detail__point-title {
+    font-size: 1.375rem;
+    line-height: 1.5;
+  }
+}
+.p-works-detail__point-desc {
+  font-size: 0.9375rem;
+  line-height: 1.9333333333;
+  color: #374151;
+}
+@media screen and (min-width: 1024px) {
+  .p-works-detail__point-desc {
+    font-size: 1rem;
+    line-height: 2;
+  }
+}
+
+.p-entry-content {
+  font-size: 0.9375rem;
+  line-height: 2;
+  color: #374151;
+}
+@media screen and (min-width: 1024px) {
+  .p-entry-content {
+    font-size: 1rem;
+    line-height: 2;
+  }
+}
+.p-entry-content > * + * {
+  margin-top: 1.25rem;
+}
+.p-entry-content h2,
+.p-entry-content h3 {
+  font-weight: 700;
+  letter-spacing: 0;
+  color: #111827;
+}
+.p-entry-content h2 {
+  margin-top: 2.25rem;
+  padding-bottom: 0.625rem;
+  border-bottom: 1px solid #dce3ea;
+  font-size: 1.3125rem;
+  line-height: 1.5238095238;
+}
+@media screen and (min-width: 1024px) {
+  .p-entry-content h2 {
+    margin-top: 3rem;
+    font-size: 1.625rem;
+    line-height: 1.5;
+  }
+}
+.p-entry-content h3 {
+  margin-top: 1.875rem;
+  font-size: 1.125rem;
+  line-height: 1.5555555556;
+}
+@media screen and (min-width: 1024px) {
+  .p-entry-content h3 {
+    font-size: 1.3125rem;
+    line-height: 1.5238095238;
+  }
+}
+.p-entry-content p,
+.p-entry-content li {
+  font-size: inherit;
+  line-height: inherit;
+}
+.p-entry-content a {
+  color: #1d6f8f;
+  text-decoration: underline;
+  text-underline-offset: 0.1875rem;
+}
+.p-entry-content ul,
+.p-entry-content ol {
+  padding-left: 1.375rem;
+}
+.p-entry-content img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
 }
 
 .p-about__heading {

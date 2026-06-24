@@ -11,7 +11,12 @@
             grid-template-columns: 1fr 1fr 1fr;
         }
     }
+    &__link{
+        display: block;
+    }
     &__thumb{
+        aspect-ratio: 1500 / 1020;
+        width: 100%;
         margin-bottom: rem(15);
     }
     &__title{

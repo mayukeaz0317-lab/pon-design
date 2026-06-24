@@ -1,0 +1,205 @@
+@use "../../global" as *;
+
+.p-works-detail {
+
+    &__inner {
+        width: min(100% - rem(30), rem(720));
+    }
+
+
+    &__thumb {
+        width: 100%;
+        margin-bottom: rem(20);
+    }
+
+    &__title {
+        font-size: rem(22);
+        line-height: lh(33, 22);
+        margin-bottom: rem(10);
+
+        @include mq($lg) {
+            font-size: rem(32);
+            line-height: lh(48, 32);
+        }
+    }
+
+    &__body {
+        display: grid;
+        gap: rem(32);
+
+        @include mq($lg) {
+            gap: rem(44);
+        }
+    }
+
+    &__table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        overflow: hidden;
+        border: 1px solid #dce3ea;
+        border-radius: rem(8);
+        background-color: #ffffff;
+        box-shadow: 0 rem(10) rem(30) rgba(24, 35, 48, 0.06);
+
+
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        @include mq($lg) {
+            grid-template-columns: rem(190) 1fr;
+        }
+
+        &:not(:last-child) {
+
+            th,
+            td {
+                border-bottom: 1px solid #dce3ea;
+            }
+        }
+    }
+
+    &__heading,
+    &__data {
+        padding: rem(15) rem(18);
+        font-size: rem(14);
+        line-height: lh(24, 14);
+        text-align: left;
+        vertical-align: top;
+
+        @include mq($lg) {
+            padding: rem(18) rem(22);
+            font-size: rem(15);
+            line-height: lh(26, 15);
+        }
+
+    }
+
+    &__heading {
+        font-weight: 700;
+        color: #334155;
+        background-color: #f1f5f7;
+
+        @include mq($lg) {
+            border-right: 1px solid #dce3ea;
+        }
+    }
+
+    &__data {
+        color: #1f2933;
+        background-color: #ffffff;
+    }
+
+    &__point {
+        padding: rem(24) rem(20);
+        border-left: rem(4) solid #2f6f73;
+        border-radius: 0 rem(8) rem(8) 0;
+        background-color: #f6faf9;
+
+        @include mq($lg) {
+            padding: rem(30) rem(34);
+        }
+
+
+    }
+
+    &__point-title {
+        margin-bottom: rem(14);
+        font-size: rem(18);
+        line-height: lh(28, 18);
+        font-weight: 700;
+        letter-spacing: 0;
+        color: #111827;
+
+        @include mq($lg) {
+            font-size: rem(22);
+            line-height: lh(33, 22);
+        }
+    }
+
+    &__point-desc {
+        font-size: rem(15);
+        line-height: lh(29, 15);
+        color: #374151;
+
+        @include mq($lg) {
+            font-size: rem(16);
+            line-height: lh(32, 16);
+        }
+    }
+}
+
+
+.p-entry-content {
+    font-size: rem(15);
+    line-height: lh(30, 15);
+    color: #374151;
+
+    @include mq($lg) {
+        font-size: rem(16);
+        line-height: lh(32, 16);
+    }
+
+    >*+* {
+        margin-top: rem(20);
+    }
+
+    h2,
+    h3 {
+        font-weight: 700;
+        letter-spacing: 0;
+        color: #111827;
+    }
+
+    h2 {
+        margin-top: rem(36);
+        padding-bottom: rem(10);
+        border-bottom: 1px solid #dce3ea;
+        font-size: rem(21);
+        line-height: lh(32, 21);
+
+        @include mq($lg) {
+            margin-top: rem(48);
+            font-size: rem(26);
+            line-height: lh(39, 26);
+        }
+    }
+
+    h3 {
+        margin-top: rem(30);
+        font-size: rem(18);
+        line-height: lh(28, 18);
+
+        @include mq($lg) {
+            font-size: rem(21);
+            line-height: lh(32, 21);
+        }
+    }
+
+    p,
+    li {
+        font-size: inherit;
+        line-height: inherit;
+    }
+
+    a {
+        color: #1d6f8f;
+        text-decoration: underline;
+        text-underline-offset: rem(3);
+    }
+
+    ul,
+    ol {
+        padding-left: rem(22);
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: rem(8);
+    }
+}
