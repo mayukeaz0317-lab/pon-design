@@ -7,48 +7,69 @@ function my_theme_setup()
 }
 add_action('after_setup_theme', 'my_theme_setup');
 
-
-function my_enqueue_scripts()
+function my_enqueue_assets()
 {
-    // SwiperのCSS
-    wp_enqueue_style(
-        'swiper-css',
-        'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css',
-        array(),
-        '11.0.0'
-    );
 
-    // style.css
+    /*
+	|--------------------------------------------------------------------------
+	| 共通CSS
+	|--------------------------------------------------------------------------
+	*/
     wp_enqueue_style(
         'my-style',
-        get_stylesheet_uri(),
-        array('swiper-css'),
-        filemtime(get_theme_file_path('/style.css'))
-    );
-
-    // jQuery
-    wp_enqueue_script('jquery');
-
-    // SwiperのJS
-    wp_enqueue_script(
-        'swiper-js',
-        'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js',
+        get_theme_file_uri('/css/style.css'),
         array(),
-        '11.0.0',
-        true
+        filemtime(get_theme_file_path('/css/style.css'))
     );
 
-    // script.js
+    /*
+	|--------------------------------------------------------------------------
+	| 共通JS
+	|--------------------------------------------------------------------------
+	*/
     wp_enqueue_script(
         'my-script',
         get_theme_file_uri('/js/script.js'),
-        array('jquery', 'swiper-js'),
+        array(),
         filemtime(get_theme_file_path('/js/script.js')),
         true
     );
-}
-add_action('wp_enqueue_scripts', 'my_enqueue_scripts');
+    wp_script_add_data('my-script', 'strategy', 'defer');
 
+    /*
+	|--------------------------------------------------------------------------
+	| トップページだけ Swiper
+	|--------------------------------------------------------------------------
+	*/
+    if (is_front_page()) {
+        wp_enqueue_style(
+            'swiper-css',
+            'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css',
+            array(),
+            '11.0.0'
+        );
+
+        wp_enqueue_script(
+            'swiper-js',
+            'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js',
+            array(),
+            '11.0.0',
+            true
+        );
+
+        wp_enqueue_script(
+            'top-swiper',
+            get_theme_file_uri('/js/top-swiper.js'),
+            array('swiper-js'),
+            filemtime(get_theme_file_path('/js/top-swiper.js')),
+            true
+        );
+
+        wp_script_add_data('swiper-js', 'strategy', 'defer');
+        wp_script_add_data('top-swiper', 'strategy', 'defer');
+    }
+}
+add_action('wp_enqueue_scripts', 'my_enqueue_assets');
 
 function custom_wpcf7_form_elements_cleaner($content)
 {

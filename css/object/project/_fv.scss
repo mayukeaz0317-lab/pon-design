@@ -2,7 +2,7 @@
 
 .p-fv-home {
     position: relative;
-    background-image: url(img/photo/hero-home-sp.webp);
+    background-image: url(../img/photo/hero-home-sp.webp);
     background-size: cover;
     background-repeat: no-repeat;
     padding-left: rem(30);
@@ -11,7 +11,7 @@
     @include flex-center;
 
     @include mq($lg) {
-        background-image: url(img/photo/hero-home-cp.webp);
+        background-image: url(../img/photo/hero-home-cp.webp);
         padding: rem(0);
     }
 
@@ -83,14 +83,14 @@
 }
 
 .p-fv {
-    background-image: url(img/photo/hero-sp.webp);
+    background-image: url(../img/photo/hero-sp.webp);
     background-size: cover;
     display: flex;
     justify-content: center;
     height: rem(180);
 
     @include mq($lg) {
-        background-image: url(img/photo/hero-sp.webp);
+        background-image: url(../img/photo/hero-sp.webp);
         height: rem(240);
     }
 
