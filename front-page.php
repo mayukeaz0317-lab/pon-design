@@ -111,7 +111,7 @@
         <div class="p-works__inner l-inner">
             <div class="p-works__slider-container">
                 <div class="swiper p-works__slider">
-                    <div class="swiper-wrapper">
+                    <div class="swiper-wrapper p-works__slider-wrap">
                         <div class="swiper-slide p-works__slide">
                             <img src="<?php echo esc_url(get_theme_file_uri('/img/photo/works-slide01.webp')); ?>" alt="スムージストというスムージー専門店のWebサイトのトップページ"
                                 class="c-img p-works__img" width="750" height="510" loading="lazy" decoding="async">
